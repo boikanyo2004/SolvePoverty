@@ -169,19 +169,3 @@ Volunteers and donors can support real people transparently.
 
 ---
 
-# ⭐ Want me to build it with you?
-
-I can generate:
-
-✔ Full database schema
-✔ Full API structure
-✔ C# models
-✔ EF Core setup
-✔ Controllers
-✔ Matching algorithm
-✔ UI mockups
-✔ Deployment guide
-
-Just tell me:
-
-👉 **Do you want the simple version or the big full system?**
