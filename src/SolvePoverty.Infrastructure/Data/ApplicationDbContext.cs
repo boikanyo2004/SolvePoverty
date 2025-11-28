@@ -2,6 +2,8 @@ using Microsoft.EntityFrameworkCore;
 using SolvePoverty.Domain.Entities;
 
 namespace SolvePoverty.Infrastructure.Data;
+using System.Threading;
+using System.Threading.Tasks;
 
 public class ApplicationDbContext : DbContext
 {
@@ -177,6 +179,8 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Course>().HasQueryFilter(e => !e.IsDeleted);
         modelBuilder.Entity<Organization>().HasQueryFilter(e => !e.IsDeleted);
     }
+
+
 
     public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {

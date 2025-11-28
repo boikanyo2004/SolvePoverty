@@ -1,0 +1,6 @@
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Infrastructure\obj\Debug\net8.0\SolvePoverty.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Infrastructure\obj\Debug\net8.0\SolvePoverty.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Infrastructure\obj\Debug\net8.0\SolvePoverty.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Infrastructure\obj\Debug\net8.0\SolvePoverty.Infrastructure.AssemblyInfo.cs
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Infrastructure\obj\Debug\net8.0\SolvePoverty.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Infrastructure\obj\Debug\net8.0\SolvePoverty.Infrastructure.sourcelink.json
