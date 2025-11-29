@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 using SolvePoverty.Domain.Entities;
 
 namespace SolvePoverty.Infrastructure.Data;
+using System;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -180,9 +181,7 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Organization>().HasQueryFilter(e => !e.IsDeleted);
     }
 
-
-
-    public override Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
+    public override async Task<int> SaveChangesAsync(CancellationToken cancellationToken = default)
     {
         var entries = ChangeTracker.Entries<BaseEntity>();
 
@@ -199,6 +198,10 @@ public class ApplicationDbContext : DbContext
             }
         }
 
-        return base.SaveChangesAsync(cancellationToken);
+        return await base.SaveChangesAsync(cancellationToken);
     }
 }
+
+
+
+    

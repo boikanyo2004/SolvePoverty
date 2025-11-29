@@ -1,0 +1,12 @@
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\bin\Debug\net10.0\SolvePoverty.Domain.deps.json
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\bin\Debug\net10.0\SolvePoverty.Domain.dll
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\bin\Debug\net10.0\SolvePoverty.Domain.pdb
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\SolvePoverty.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\SolvePoverty.Domain.AssemblyInfoInputs.cache
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\SolvePoverty.Domain.AssemblyInfo.cs
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\SolvePoverty.Domain.csproj.CoreCompileInputs.cache
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\SolvePoverty.Domain.sourcelink.json
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\SolvePoverty.Domain.dll
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\refint\SolvePoverty.Domain.dll
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\SolvePoverty.Domain.pdb
+C:\Users\2540532\source\SolvePoverty\src\SolvePoverty.Domain\obj\Debug\net10.0\ref\SolvePoverty.Domain.dll
