@@ -1,0 +1,342 @@
+﻿@page "/"
+
+<PageTitle>SolvePoverty - Community Support Platform</PageTitle>
+
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">Together We Can Solve Poverty</h1>
+        <p class="hero-subtitle">Connecting people in need with opportunities, resources, and support</p>
+        <div class="hero-buttons">
+            <a href="/help-requests" class="btn btn-primary">Find Help</a>
+            <a href="/help-offers" class="btn btn-secondary">Offer Help</a>
+            <a href="/jobs" class="btn btn-secondary">Find Jobs</a>
+            <a href="/courses" class="btn btn-secondary">Learn Skills</a>
+        </div>
+    </div>
+</div>
+
+<div class="features-section">
+    <div class="container">
+        <h2 class="section-title">How We Help</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">🤝</div>
+                <h3>Request & Offer Help</h3>
+                <p>Connect with people who can provide food, shelter, clothing, and essential services.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💼</div>
+                <h3>Job Opportunities</h3>
+                <p>Access local job postings and employment opportunities to build financial independence.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">📚</div>
+                <h3>Skill Training</h3>
+                <p>Free courses to learn valuable skills and improve your employability.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💝</div>
+                <h3>Donations</h3>
+                <p>Support individuals and families directly through secure donations.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">🏢</div>
+                <h3>Local Resources</h3>
+                <p>Find food banks, shelters, and support organizations in your area.</p>
+            </div>
+            
+            <div class="feature-card">
+                <div class="feature-icon">💬</div>
+                <h3>Community Support</h3>
+                <p>Connect with volunteers and organizations ready to help.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="urgent-requests-section">
+    <div class="container">
+        <h2 class="section-title">Urgent Help Requests</h2>
+        @if (urgentRequests == null)
+        {
+            <p class="loading">Loading urgent requests...</p>
+        }
+        else if (!urgentRequests.Any())
+        {
+            <p class="no-data">No urgent requests at the moment.</p>
+        }
+        else
+        {
+            <div class="requests-grid">
+                @foreach (var request in urgentRequests)
+                {
+                    <div class="request-card urgent">
+                        <span class="urgent-badge">URGENT</span>
+                        <h3>@request.Title</h3>
+                        <p>@request.Description</p>
+                        <div class="request-meta">
+                            <span>📍 @request.User?.City, @request.User?.State</span>
+                            <span>📅 @request.CreatedAt.ToString("MMM dd, yyyy")</span>
+                        </div>
+                        <a href="/help-requests/@request.Id" class="btn btn-small">View Details</a>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+</div>
+
+<div class="cta-section">
+    <div class="container">
+        <h2>Ready to Make a Difference?</h2>
+        <p>Join our community and help solve poverty one connection at a time.</p>
+        <div class="cta-buttons">
+            <a href="/register" class="btn btn-large btn-primary">Get Started</a>
+            <a href="/about" class="btn btn-large btn-outline">Learn More</a>
+        </div>
+    </div>
+</div>
+
+<style>
+    .hero-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 3.5rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 40px;
+        opacity: 0.95;
+    }
+
+    .hero-buttons {
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        padding: 12px 30px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: inline-block;
+    }
+
+    .btn-primary {
+        background: #ff6b6b;
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: #ee5a52;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(255,107,107,0.4);
+    }
+
+    .btn-secondary {
+        background: white;
+        color: #667eea;
+    }
+
+    .btn-secondary:hover {
+        background: #f8f9fa;
+        transform: translateY(-2px);
+    }
+
+    .btn-small {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 15px 40px;
+        font-size: 1.1rem;
+    }
+
+    .btn-outline {
+        background: transparent;
+        color: white;
+        border: 2px solid white;
+    }
+
+    .features-section {
+        padding: 80px 20px;
+        background: #f8f9fa;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .section-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 50px;
+        color: #2d3748;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+
+    .feature-card {
+        background: white;
+        padding: 30px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        transition: transform 0.3s ease;
+        text-align: center;
+    }
+
+    .feature-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .feature-icon {
+        font-size: 3rem;
+        margin-bottom: 15px;
+    }
+
+    .feature-card h3 {
+        color: #667eea;
+        margin-bottom: 10px;
+    }
+
+    .urgent-requests-section {
+        padding: 80px 20px;
+    }
+
+    .requests-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 20px;
+    }
+
+    .request-card {
+        background: white;
+        padding: 25px;
+        border-radius: 12px;
+        border-left: 4px solid #667eea;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        position: relative;
+    }
+
+    .request-card.urgent {
+        border-left-color: #ff6b6b;
+    }
+
+    .urgent-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #ff6b6b;
+        color: white;
+        padding: 4px 12px;
+        border-radius: 20px;
+        font-size: 0.75rem;
+        font-weight: bold;
+    }
+
+    .request-card h3 {
+        color: #2d3748;
+        margin-bottom: 10px;
+    }
+
+    .request-meta {
+        display: flex;
+        gap: 15px;
+        margin: 15px 0;
+        font-size: 0.9rem;
+        color: #718096;
+    }
+
+    .cta-section {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        padding: 80px 20px;
+        text-align: center;
+    }
+
+    .cta-section h2 {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .cta-section p {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+        opacity: 0.95;
+    }
+
+    .cta-buttons {
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .loading, .no-data {
+        text-align: center;
+        padding: 40px;
+        color: #718096;
+    }
+
+    @@media (max-width: 768px) {
+        .hero-title {
+            font-size: 2rem;
+        }
+
+        .hero-subtitle {
+            font-size: 1.1rem;
+        }
+
+        .features-grid, .requests-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+@code {
+    private List<HelpRequestDto>? urgentRequests;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // We'll implement API calls next
+        // For now, this is just the UI structure
+    }
+
+    public class HelpRequestDto
+    {
+        public int Id { get; set; }
+        public string Title { get; set; } = "";
+        public string Description { get; set; } = "";
+        public DateTime CreatedAt { get; set; }
+        public UserDto? User { get; set; }
+    }
+
+    public class UserDto
+    {
+        public string? City { get; set; }
+        public string? State { get; set; }
+    }
+}

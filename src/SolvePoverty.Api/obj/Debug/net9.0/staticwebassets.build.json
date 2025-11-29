@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ry+IxYadsZGDRj24TtxlAos6+FEncaBeXNw/VzKzMHc=",
+  "Source": "SolvePoverty.Api",
+  "BasePath": "_content/SolvePoverty.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

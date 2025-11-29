@@ -33,10 +33,15 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseHttpsRedirection();
+// Comment out HTTPS redirection for now
+// app.UseHttpsRedirection();
+
 app.UseCors("AllowAll");
 app.UseAuthorization();
 app.MapControllers();
+
+// Add a root endpoint that redirects to Swagger
+app.MapGet("/", () => Results.Redirect("/swagger"));
 
 // Database Migration
 using (var scope = app.Services.CreateScope())

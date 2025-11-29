@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
-using Microsoft.Extensions.Configuration; // Add this
+using Microsoft.Extensions.Configuration;
 using System.IO;
 
 namespace SolvePoverty.Infrastructure.Data;

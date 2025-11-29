@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\SolvePoverty.Web.props" />
+</Project>
